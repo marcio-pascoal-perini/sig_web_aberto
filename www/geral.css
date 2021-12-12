@@ -1,0 +1,13 @@
+.shiny-input-container:not(.shiny-input-container-inline) {
+   width: 100%;
+}
+
+.content-wrapper {
+  background-color: #ffffff;
+}
+
+/*
+.main-sidebar {
+  background-color: powderblue !important;
+}
+*/

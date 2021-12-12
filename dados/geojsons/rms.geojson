@@ -1,0 +1,114 @@
+﻿{
+	"type": "FeatureCollection",
+	"features": [{
+		"type": "Feature",
+		"properties": {
+			"local": "Belém",
+			"tipo": "Região Metropolitana",
+			"codigo": 1501
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [-48.4901968, -1.4557794]
+		}
+	}, {
+		"type": "Feature",
+		"properties": {
+			"local": "Fortaleza",
+			"tipo": "Região Metropolitana",
+			"codigo": 2301
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [-38.5266704, -3.7318616]
+		}
+	}, {
+		"type": "Feature",
+		"properties": {
+			"local": "Recife",
+			"tipo": "Região Metropolitana",
+			"codigo": 2601
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [-34.8769643, -8.0475622]
+		}
+	}, {
+		"type": "Feature",
+		"properties": {
+			"local": "Salvador",
+			"tipo": "Região Metropolitana",
+			"codigo": 2901
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [-38.502304, -12.9730401]
+		}
+	}, {
+		"type": "Feature",
+		"properties": {
+			"local": "Belo Horizonte",
+			"tipo": "Região Metropolitana",
+			"codigo": 3101
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [-43.9352376, -19.9245018]
+		}
+	}, {
+		"type": "Feature",
+		"properties": {
+			"local": "Grande Vitória",
+			"tipo": "Região Metropolitana",
+			"codigo": 3201
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [-40.2957768, -20.2976178]
+		}
+	}, {
+		"type": "Feature",
+		"properties": {
+			"local": "Rio de Janeiro",
+			"tipo": "Região Metropolitana",
+			"codigo": 3301
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [-43.1728965, -22.9068467]
+		}
+	}, {
+		"type": "Feature",
+		"properties": {
+			"local": "São Paulo",
+			"tipo": "Região Metropolitana",
+			"codigo": 3501
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [-46.6333094, -23.5505199]
+		}
+	}, {
+		"type": "Feature",
+		"properties": {
+			"local": "Curitiba",
+			"tipo": "Região Metropolitana",
+			"codigo": 4101
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [-49.267137, -25.4289541]
+		}
+	}, {
+		"type": "Feature",
+		"properties": {
+			"local": "Porto Alegre",
+			"tipo": "Região Metropolitana",
+			"codigo": 4301
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [-51.2176584, -30.0346471]
+		}
+	}]
+}
