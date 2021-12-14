@@ -55,8 +55,12 @@ PMS1_Admin <- function(session) {
   
   ## variáveis e vetores ##
   
-  mes <- 202106
-  meses <- c('Junho 2021' = 202106,
+  mes <- 202110
+  meses <- c('Outubro 2021' = 202110,
+             'Setembro 2021' = 202109,
+             'Agosto 2021' = 202108,
+             'Julho 2021' = 202107,
+             'Junho 2021' = 202106,
              'Maio 2021' = 202105,
              'Abril 2021' = 202104,
              'Março 2021' = 202103,
@@ -73,19 +77,7 @@ PMS1_Admin <- function(session) {
              'Abril 2020' = 202004,
              'Março 2020' = 202003,
              'Fevereiro 2020' = 202002,
-             'Janeiro 2020' = 202001,
-             'Dezembro 2019' = 201912,
-             'Novembro 2019' = 201911,
-             'Outubro 2019' = 201910,
-             'Setembro 2019' = 201909,
-             'Agosto 2019' = 201908,
-             'Julho 2019' = 201907,
-             'Junho 2019' = 201906,
-             'Maio 2019' = 201905,
-             'Abril 2019' = 201904,
-             'Março 2019' = 201903,
-             'Fevereiro 2019' = 201902,
-             'Janeiro 2019' = 201901
+             'Janeiro 2020' = 202001
   )
   
   variavel <- 8677
