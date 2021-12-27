@@ -57,8 +57,12 @@ IPCA151_Admin <- function(session) {
   
   ## variáveis e vetores ##
   
-  mes <- 202108
-  meses <- c('Agosto 2021' = 202108,
+  mes <- 202112
+  meses <- c('Dezembro 2021' = 202112,
+             'Novembro 2021' = 202111,
+             'Outubro 2021' = 202110,
+             'Setembro 2021' = 202109,
+             'Agosto 2021' = 202108,
              'Julho 2021' = 202107,
              'Junho 2021' = 202106,
              'Maio 2021' = 202105,
@@ -89,19 +93,7 @@ IPCA151_Admin <- function(session) {
              'Abril 2019' = 201904,
              'Março 2019' = 201903,
              'Fevereiro 2019' = 201902,
-             'Janeiro 2019' = 201901,
-             'Dezembro 2018' = 201812,
-             'Novembro 2018' = 201811,
-             'Outubro 2018' = 201810,
-             'Setembro 2018' = 201809,
-             'Agosto 2018' = 201808,
-             'Julho 2018' = 201807,             
-             'Junho 2018' = 201806,             
-             'Maio 2018' = 201805,             
-             'Abril 2018' = 201804,
-             'Março 2018' = 201803,
-             'Fevereiro 2018' = 201802,
-             'Janeiro 2018' = 201801
+             'Janeiro 2019' = 201901
   )
   
   grupo <- 7169
