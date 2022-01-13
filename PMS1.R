@@ -55,8 +55,9 @@ PMS1_Admin <- function(session) {
   
   ## variáveis e vetores ##
   
-  mes <- 202110
-  meses <- c('Outubro 2021' = 202110,
+  mes <- 202111
+  meses <- c('Novembro 2021' = 202111,
+             'Outubro 2021' = 202110,
              'Setembro 2021' = 202109,
              'Agosto 2021' = 202108,
              'Julho 2021' = 202107,
