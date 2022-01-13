@@ -57,8 +57,13 @@ IPCA1_Admin <- function(session) {
   
   ## variáveis e vetores ##
   
-  mes <- 202107
-  meses <- c('Julho 2021' = 202107,
+  mes <- 202112
+  meses <- c('Dezembro 2021' = 202112,
+             'Novembro 2021' = 202111,
+             'Outubro 2021' = 202110,
+             'Setembro 2021' = 202109,
+             'Agosto 2021' = 202108,
+             'Julho 2021' = 202107,
              'Junho 2021' = 202106,
              'Maio 2021' = 202105,
              'Abril 2021' = 202104,
