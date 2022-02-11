@@ -55,8 +55,9 @@ SINAPI1_Admin <- function(session) {
   
   ## variáveis e vetores ##
   
-  mes <- 202112
-  meses <- c('Dezembro 2021' = 202112,
+  mes <- 202201
+  meses <- c('Janeiro 2022' = 202201,
+             'Dezembro 2021' = 202112,
              'Novembro 2021' = 202111,
              'Outubro 2021' = 202110,
              'Setembro 2021' = 202109,
