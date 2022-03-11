@@ -1,0 +1,301 @@
+﻿{
+	"type": "FeatureCollection",
+	"features": [{
+		"type": "Feature",
+		"properties": {
+			"local": "Porto Velho",
+			"tipo": "Capital",
+			"codigo": 1100205
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [-63.9004303, -8.7611605]
+		}
+	}, {
+		"type": "Feature",
+		"properties": {
+			"local": "Rio Branco",
+			"tipo": "Capital",
+			"codigo": 1200401
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [-67.824918, -9.9753837]
+		}
+	}, {
+		"type": "Feature",
+		"properties": {
+			"local": "Manaus",
+			"tipo": "Capital",
+			"codigo": 1302603
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [-60.0217314, -3.1190275]
+		}
+	}, {
+		"type": "Feature",
+		"properties": {
+			"local": "Boa Vista",
+			"tipo": "Capital",
+			"codigo": 1400100
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [-60.6758331, 2.8235098]
+		}
+	}, {
+		"type": "Feature",
+		"properties": {
+			"local": "Belém",
+			"tipo": "Capital",
+			"codigo": 1501402
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [-48.4901968, -1.4557794]
+		}
+	}, {
+		"type": "Feature",
+		"properties": {
+			"local": "Macapá",
+			"tipo": "Capital",
+			"codigo": 1600303
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [-51.070535, 0.0355735]
+		}
+	}, {
+		"type": "Feature",
+		"properties": {
+			"local": "Palmas",
+			"tipo": "Capital",
+			"codigo": 1721000
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [-48.3242858, -10.249091]
+		}
+	}, {
+		"type": "Feature",
+		"properties": {
+			"local": "São Luiz",
+			"tipo": "Capital",
+			"codigo": 2111300
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [-44.2829046, -2.5391099]
+		}
+	}, {
+		"type": "Feature",
+		"properties": {
+			"local": "Teresina",
+			"tipo": "Capital",
+			"codigo": 2211001
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [-42.8037597, -5.0920108]
+		}
+	}, {
+		"type": "Feature",
+		"properties": {
+			"local": "Fortaleza",
+			"tipo": "Capital",
+			"codigo": 2304400
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [-38.5266704, -3.7318616]
+		}
+	}, {
+		"type": "Feature",
+		"properties": {
+			"local": "Natal",
+			"tipo": "Capital",
+			"codigo": 2408102
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [-35.200916, -5.7792569]
+		}
+	}, {
+		"type": "Feature",
+		"properties": {
+			"local": "João Pessoa",
+			"tipo": "Capital",
+			"codigo": 2507507
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [-34.8450118, -7.1194958]
+		}
+	}, {
+		"type": "Feature",
+		"properties": {
+			"local": "Recife",
+			"tipo": "Capital",
+			"codigo": 2611606
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [-34.8769643, -8.0475622]
+		}
+	}, {
+		"type": "Feature",
+		"properties": {
+			"local": "Maceió",
+			"tipo": "Capital",
+			"codigo": 2704302
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [-35.7089492, -9.6498487]
+		}
+	}, {
+		"type": "Feature",
+		"properties": {
+			"local": "Aracaju",
+			"tipo": "Capital",
+			"codigo": 2800308
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [-37.0730823, -10.9472468]
+		}
+	}, {
+		"type": "Feature",
+		"properties": {
+			"local": "Salvador",
+			"tipo": "Capital",
+			"codigo": 2927408
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [-38.502304, -12.9730401]
+		}
+	}, {
+		"type": "Feature",
+		"properties": {
+			"local": "Belo Horizonte",
+			"tipo": "Capital",
+			"codigo": 3106200
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [-43.9352376, -19.9245018]
+		}
+	}, {
+		"type": "Feature",
+		"properties": {
+			"local": "Vitória",
+			"tipo": "Capital",
+			"codigo": 3205309
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [-40.2957768, -20.2976178]
+		}
+	}, {
+		"type": "Feature",
+		"properties": {
+			"local": "Rio de Janeiro",
+			"tipo": "Capital",
+			"codigo": 3304557
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [-43.1728965, -22.9068467]
+		}
+	}, {
+		"type": "Feature",
+		"properties": {
+			"local": "São Paulo",
+			"tipo": "Capital",
+			"codigo": 3550308
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [-46.6333094, -23.5505199]
+		}
+	}, {
+		"type": "Feature",
+		"properties": {
+			"local": "Curitiba",
+			"tipo": "Capital",
+			"codigo": 4106902
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [-49.267137, -25.4289541]
+		}
+	}, {
+		"type": "Feature",
+		"properties": {
+			"local": "Florianópolis",
+			"tipo": "Capital",
+			"codigo": 4205407
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [-48.5480499, -27.5953778]
+		}
+	}, {
+		"type": "Feature",
+		"properties": {
+			"local": "Porto Alegre",
+			"tipo": "Capital",
+			"codigo": 4314902
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [-51.2176584, -30.0346471]
+		}
+	}, {
+		"type": "Feature",
+		"properties": {
+			"local": "Campo Grande",
+			"tipo": "Capital",
+			"codigo": 5002704
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [-54.6201211, -20.4697105]
+		}
+	}, {
+		"type": "Feature",
+		"properties": {
+			"local": "Cuiabá",
+			"tipo": "Capital",
+			"codigo": 5103403
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [-56.0978917, -15.6014109]
+		}
+	}, {
+		"type": "Feature",
+		"properties": {
+			"local": "Goiânia",
+			"tipo": "Capital",
+			"codigo": 5208707
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [-49.2647885, -16.6868824]
+		}
+	}, {
+		"type": "Feature",
+		"properties": {
+			"local": "Brasília",
+			"tipo": "Capital",
+			"codigo": 5300108
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [-47.8644715, -15.7997654]
+		}
+	}]
+}

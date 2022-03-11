@@ -701,7 +701,7 @@ CAGED1_Admin <- function(session) {
     message = 'Carregando dados...',
     value = 0, {
       if (!exists(x = 'capitais')) {
-        capitais <<- geojsonio::geojson_read(x = 'dados/geojsons/capitais.geojson', method = 'local', what = 'sp')        
+        capitais <<- geojsonio::geojson_read(x = 'dados/geojsons/capitais.geojson', what = 'sp')        
       }
       incProgress(1 / 10)  
       if (!exists(x = 'capitaisOk')) {
@@ -713,10 +713,10 @@ CAGED1_Admin <- function(session) {
           }
         }
         capitaisOk <<- TRUE
-      }  
+      }
       incProgress(1 / 10)
       if (!exists(x = 'estados')) {
-        estados <<- geojsonio::geojson_read(x = 'dados/geojsons/estados.geojson', method = 'local', what = 'sp')
+        estados <<- geojsonio::geojson_read(x = 'dados/geojsons/estados.geojson', what = 'sp')
       }
       incProgress(1 / 10)      
       if (!exists(x = 'estadosOk')) {

@@ -54,8 +54,8 @@ body <- dashboardBody(
     tabItem(tabName = 'tabCAGED1',
             uiOutput('pageCAGED1')
     ),
-    tabItem(tabName = 'tabPNAD1',
-            uiOutput('pagePNAD1')
+    tabItem(tabName = 'tabPNAD2',
+            uiOutput('pagePNAD2')
     ),
     tabItem(tabName = 'tabRMSP1',
             uiOutput('pageRMSP1')
@@ -149,7 +149,7 @@ server <- function(input, output, session) {
         ),        
         menuSubItem(
           text = tags$span('PNAD - Divulgação Regional', tags$br(), 'e Trimestral', title = 'Pesquisa Nacional por Amostra de Domicílios'),
-          tabName = 'tabPNAD1',
+          tabName = 'tabPNAD2',
           selected = ifelse(stri_cmp_equiv(s, 'pnad1', strength = 2), TRUE, FALSE)
         ),
         menuSubItem(
@@ -201,7 +201,7 @@ server <- function(input, output, session) {
       incProgress(1 / 10)
       source(file = 'CAGED1.R', encoding = 'UTF-8', local = TRUE)  
       incProgress(1 / 10)      
-      source(file = 'PNAD1.R', encoding = 'UTF-8', local = TRUE)
+      source(file = 'PNAD2.R', encoding = 'UTF-8', local = TRUE)
       incProgress(1 / 10)      
       source(file = 'RMSP1.R', encoding = 'UTF-8', local = TRUE)
       incProgress(1 / 10)      
@@ -230,9 +230,9 @@ server <- function(input, output, session) {
     CAGED1_Pagina(session = session)    
   })  
   
-  output$pagePNAD1 <- renderUI({
-    PNAD1_Admin(session = session)        
-    PNAD1_Pagina(session = session)    
+  output$pagePNAD2 <- renderUI({
+    PNAD2_Admin(session = session)        
+    PNAD2_Pagina(session = session)    
   })  
   
   output$pageRMSP1 <- renderUI({
