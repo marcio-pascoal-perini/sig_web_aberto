@@ -70,7 +70,11 @@ PNAD2_Admin <- function(session) {
                   '4º trimestre 2019' = 201904,
                   '3º trimestre 2019' = 201903,
                   '2º trimestre 2019' = 201902,
-                  '1º trimestre 2019' = 201901
+                  '1º trimestre 2019' = 201901,
+                  '4º trimestre 2018' = 201804,
+                  '3º trimestre 2018' = 201803,
+                  '2º trimestre 2018' = 201802,
+                  '1º trimestre 2018' = 201801                  
   )
   
   indicador <- 4099
@@ -83,7 +87,7 @@ PNAD2_Admin <- function(session) {
 
   registrosPorPagina <- 10
 
-  fonte <- 'IBGE - Tabelas 6461, 6466, 6467 e 6468'
+  fonte <- 'IBGE - Tabelas: 6461, 6466, 6467 e 6468'
 
   visoes <- c('Cartograma' = 'cartograma', 'Gráfico' = 'grafico', 'Histograma' = 'histograma', 'Tabela' = 'tabela')
   
