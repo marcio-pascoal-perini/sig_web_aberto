@@ -55,8 +55,9 @@ PIMPF1_Admin <- function(session) {
   
   ## variáveis e vetores ##
   
-  mes <- 202201
-  meses <- c('Janeiro 2022' = 202201,
+  mes <- 202202
+  meses <- c('Fevereiro 2022' = 202202,
+             'Janeiro 2022' = 202201,
              'Dezembro 2021' = 202112,
              'Novembro 2021' = 202111,
              'Outubro 2021' = 202110,
@@ -89,17 +90,17 @@ PIMPF1_Admin <- function(session) {
                   'Indústrias de Transformação' = 129316
   )
   
-  tipo = 3139
-  tipos = c('Variação Percentual Mensal (Base: igual mês do ano anterior)' = 3139,  
-            'Variação Percentual Acumulada no Ano (Base: igual período do ano anterior)' = 3140,  
-            'Variação percentual Acumulada nos Últimos 12 Meses (Base: últimos 12 meses anteriores)' = 3141
+  tipo = 11602
+  tipos = c('Variação mês/mesmo mês do ano anterior' = 11602,  
+            'Variação acumulada no ano' = 11603,  
+            'Variação acumulada em 12 meses' = 11604
   )
-  
+
   registrosPorPagina <- 10
   
   visoes <- c('Cartograma' = 'cartograma', 'Gráfico' = 'grafico', 'Histograma' = 'histograma', 'Tabela' = 'tabela')
   
-  fonte <- 'IBGE - Tabela 3653'
+  fonte <- 'IBGE - Tabela 8159'
   
   ## funções ##
   
@@ -116,25 +117,25 @@ PIMPF1_Admin <- function(session) {
   }
   
   camadaEstados <- function() {
-    temp <- subset(dadosEstados, D1C == mes & D2C == atividade & D4C == tipo, select = c('D3C', 'V'))
+    temp <- subset(dadosEstados, D2C == mes & D3C == atividade & D4C == tipo, select = c('D1C', 'V'))
     names(temp)[names(temp) == 'V'] <- 'valor'
-    sp::merge(estados, temp, by.x = 'codigo', by.y = 'D3C')
+    sp::merge(estados, temp, by.x = 'codigo', by.y = 'D1C')
   }
   
   dadosGrafico <- function() {
-    temp <- subset(dadosEstados, D1C == mes & D2C == atividade & D4C == tipo & !is.na(V), select = c('D3N', 'V'))
-    temp$D3N <- factor(temp$D3N, levels = temp$D3N[order(temp$V)])
+    temp <- subset(dadosEstados, D2C == mes & D3C == atividade & D4C == tipo & !is.na(V), select = c('D1N', 'V'))
+    temp$D3N <- factor(temp$D1N, levels = temp$D1N[order(temp$V)])
     return(temp)
   }
-  
+
   dadosHistograma <- function() {
-    temp <- subset(dadosBrasil, D2C == atividade & D4C == tipo, select = c('D1C', 'D1N', 'V'))
-    temp$D1N <- factor(temp$D1N, levels = temp$D1N[order(temp$D1C)])
+    temp <- subset(dadosBrasil, D3C == atividade & D4C == tipo, select = c('D2C', 'D2N', 'V'))
+    temp$D2N <- factor(temp$D2N, levels = temp$D2N[order(temp$D2C)])
     return(temp)
   }
-  
+
   colunasTabela <- function() {
-    c('D3C', 'D3N', 'D1N', 'D2N', 'D4N', 'V')
+    c('D1C', 'D1N', 'D2N', 'D3N', 'D4N', 'V')
   }  
   
   titulosTabela <- function() {
@@ -142,7 +143,7 @@ PIMPF1_Admin <- function(session) {
   }  
   
   dadosTabela <- function() {
-    subset(dadosEstados, D1C == mes & D2C == atividade & D4C == tipo, select = colunasTabela())
+    subset(dadosEstados, D2C == mes & D3C == atividade & D4C == tipo, select = colunasTabela())
   }
   
   atualizarVisoes <- function(inicial) {
@@ -268,9 +269,9 @@ PIMPF1_Admin <- function(session) {
           session$output$histogramaPIMPF1 <- renderPlot({
             isolate({
               dh <- dadosHistograma() 
-              ggplot(data = dh, aes(x = dh$D1N, y = dh$V)) +
+              ggplot(data = dh, aes(x = dh$D2N, y = dh$V)) +
                 geom_line(colour = '#94c1d8', size = 2, linetype = 1, group = 1) +
-                geom_point(colour = ifelse(dh$D1C == mes, '#ff0000', '#808080'), size = 4) +
+                geom_point(colour = ifelse(dh$D2C == mes, '#ff0000', '#808080'), size = 4) +
                 labs(title = sprintf('%s\n%s', names(atividades[atividades == atividade]), names(tipos[tipos == tipo])), x = '', y = '') +
                 geom_text(aes(label = sprintf('%s%s', format(x = dh$V, big.mark = '.'), '%')), vjust = 1.6, color = '#000000', size = 4) +
                 theme(plot.title = element_text(hjust = 0.5, face = 'bold'),

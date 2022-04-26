@@ -55,8 +55,9 @@ PMS1_Admin <- function(session) {
   
   ## variáveis e vetores ##
   
-  mes <- 202201
-  meses <- c('Janeiro 2022' = 202201,
+  mes <- 202202
+  meses <- c('Fevereiro 2022' = 202202,
+             'Janeiro 2022' = 202201,
              'Dezembro 2021' = 202112,
              'Novembro 2021' = 202111,
              'Outubro 2021' = 202110,
@@ -82,23 +83,23 @@ PMS1_Admin <- function(session) {
              'Fevereiro 2020' = 202002,
              'Janeiro 2020' = 202001
   )
-  
-  variavel <- 8677
-  variaveis <- c('Índice de Receita Nominal de Serviços' = 8676,
-                 'Índice de Volume de Serviços' = 8677
+
+  variavel <- 56725
+  variaveis <- c('Índice de receita nominal de serviços' = 56725,
+                 'Índice de volume de serviços' = 56726
   )
   
-  tipo = 90668
-  tipos = c('Variação Mensal (base: igual mês do ano anterior)' = 90668,  
-            'Variação Acumulada no Ano (base: igual período do ano anterior)' = 90669,  
-            'Variação Acumulada de 12 Meses' = 90670
+  tipo = 11624
+  tipos = c('Variação mensal' = 11624,  
+            'Variação acumulada no ano' = 11625,  
+            'Variação acumulada em 12 meses' = 11626
   )
-  
+
   registrosPorPagina <- 10
   
   visoes <- c('Cartograma' = 'cartograma', 'Gráfico' = 'grafico', 'Histograma' = 'histograma', 'Tabela' = 'tabela')
 
-  fonte <- 'IBGE - Tabela 6442'
+  fonte <- 'IBGE - Tabela 8161'
   
   ## funções ##
   
@@ -115,13 +116,13 @@ PMS1_Admin <- function(session) {
   }
   
   camadaEstados <- function() {
-    temp <- subset(dadosEstados, D1C == mes & D2C == variavel & D4C == tipo, select = c('D3C', 'V'))
+    temp <- subset(dadosEstados, D1C == mes & D4C == variavel & D2C == tipo, select = c('D3C', 'V'))
     names(temp)[names(temp) == 'V'] <- 'valor'
     sp::merge(estados, temp, by.x = 'codigo', by.y = 'D3C')
   }
   
   dadosGrafico <- function() {
-    temp <- subset(dadosEstados, D1C == mes & D2C == variavel & D4C == tipo & !is.na(V), select = c('D3N', 'V'))
+    temp <- subset(dadosEstados, D1C == mes & D4C == variavel & D2C == tipo & !is.na(V), select = c('D3N', 'V'))
     maiores <- temp[order(temp$V, decreasing = TRUE),]
     maiores <- head(x = maiores, n = 5)
     menores <- temp[order(temp$V, decreasing = FALSE),]
@@ -132,13 +133,13 @@ PMS1_Admin <- function(session) {
   }
 
   dadosHistograma <- function() {
-    temp <- subset(dadosBrasil, D2C == variavel & D4C == tipo, select = c('D1C', 'D1N', 'V'))
+    temp <- subset(dadosBrasil, D4C == variavel & D2C == tipo, select = c('D1C', 'D1N', 'V'))
     temp$D1N <- factor(temp$D1N, levels = temp$D1N[order(temp$D1C)])
     return(temp)
   }
   
   colunasTabela <- function() {
-    c('D3C', 'D3N', 'D1N', 'D2N', 'D4N', 'V')
+    c('D3C', 'D3N', 'D1N', 'D4N', 'D2N', 'V')
   }  
   
   titulosTabela <- function() {
@@ -146,7 +147,7 @@ PMS1_Admin <- function(session) {
   }  
   
   dadosTabela <- function() {
-    subset(dadosEstados, D1C == mes & D2C == variavel & D4C == tipo, select = colunasTabela())
+    subset(dadosEstados, D1C == mes & D4C == variavel & D2C == tipo, select = colunasTabela())
   }
   
   atualizarVisoes <- function(inicial) {
