@@ -57,8 +57,9 @@ IPCA151_Admin <- function(session) {
   
   ## variáveis e vetores ##
   
-  mes <- 202204
-  meses <- c('Abril 2022' = 202204,
+  mes <- 202205
+  meses <- c('Maio 2022' = 202205,
+             'Abril 2022' = 202204,
              'Março 2022' = 202203,
              'Fevereiro 2022' = 202202,
              'Janeiro 2022' = 202201,
