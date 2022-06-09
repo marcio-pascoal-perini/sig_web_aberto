@@ -29,4 +29,5 @@ endereco <- 'YOUR ADDRESS ON SENDGRID'
 chave <- 'YOUR KEY ON SENDGRID'
 emailSuporte <- 'YOUR SUPORT EMAIL'
 nomeSuporte <- 'YOUR SUPORT NAME'
+emailRemetente <- 'YOUR SENDER EMAIL'
 ```

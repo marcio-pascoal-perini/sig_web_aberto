@@ -82,18 +82,20 @@ INICIO_Admin <- function(session) {
   enviarEmail <- function(nome, email, mensagem) {
     endereco <- 'YOUR ADDRESS ON SENDGRID'
     chave <- 'YOUR KEY ON SENDGRID'
-    
-    emailSuporte <- 'YOUR SUPORT EMAIL'    
+    emailSuporte <- 'YOUR SUPORT EMAIL'
     nomeSuporte <- 'YOUR SUPORT NAME'
-    
+    emailRemetente <- 'YOUR SENDER EMAIL'
     assunto <- 'Mensagem enviada através do formulário contato'
     assunto <- stri_escape_unicode(str = assunto)
     nome <- stri_escape_unicode(str = nome)
     email <- stri_escape_unicode(str = email)
-    mensagem <- stri_replace_all_fixed(mensagem, '\n', '<br>')
+    dados <- 'Nome: %s\n\nEmail: %s\n\nMensagem: %s\n\n'
+    dados <- sprintf(dados, nome, email, mensagem)
+    mensagem <- stri_replace_all_fixed(dados, '\n', '<br>')
     mensagem <- stri_escape_unicode(str = mensagem)
     dados <- '{"personalizations": [{"to": [{"email": "%s", "name": "%s"}]}],"from": {"email": "%s", "name": "%s"},"subject": "%s","content": [{"type": "text/html", "value": "%s"}]}'
-    dados <- sprintf(dados, emailSuporte, nomeSuporte, email, nome, assunto, mensagem)
+    # dados <- sprintf(dados, emailSuporte, nomeSuporte, email, nome, assunto, mensagem)
+    dados <- sprintf(dados, emailSuporte, nomeSuporte, emailRemetente, 'SIG Web Aberto', assunto, mensagem)
     h <- curl::new_handle()
     curl::handle_setopt(handle = h, .list = list(post = TRUE, postfields = dados, verbose = FALSE))
     curl::handle_setheaders(

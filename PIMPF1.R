@@ -55,8 +55,9 @@ PIMPF1_Admin <- function(session) {
   
   ## variáveis e vetores ##
   
-  mes <- 202203
-  meses <- c('Março 2022' = 202203,
+  mes <- 202204
+  meses <- c('Abril 2022' = 202204,
+             'Março 2022' = 202203,
              'Fevereiro 2022' = 202202,
              'Janeiro 2022' = 202201,
              'Dezembro 2021' = 202112,
