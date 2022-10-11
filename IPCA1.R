@@ -57,8 +57,9 @@ IPCA1_Admin <- function(session) {
   
   ## variáveis e vetores ##
   
-  mes <- 202208
-  meses <- c('Agosto 2022' = 202208,
+  mes <- 202209
+  meses <- c('Setembro 2022' = 202209,
+             'Agosto 2022' = 202208,
              'Julho 2022' = 202207,
              'Junho 2022' = 202206,
              'Maio 2022' = 202205,
