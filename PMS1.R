@@ -55,8 +55,9 @@ PMS1_Admin <- function(session) {
   
   ## variáveis e vetores ##
   
-  mes <- 202207
-  meses <- c('Julho 2022' = 202207,
+  mes <- 202208
+  meses <- c('Agosto 2022' = 202208,
+             'Julho 2022' = 202207,
              'Junho 2022' = 202206,
              'Maio 2022' = 202205,
              'Abril 2022' = 202204,
