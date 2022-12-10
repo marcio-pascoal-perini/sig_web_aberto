@@ -55,8 +55,9 @@ PIMPF1_Admin <- function(session) {
   
   ## variáveis e vetores ##
   
-  mes <- 202209
-  meses <- c('Setembro 2022' = 202209,
+  mes <- 202210
+  meses <- c('Outubro 2022' = 202210,
+             'Setembro 2022' = 202209,
              'Agosto 2022' = 202208,
              'Julho 2022' = 202207,
              'Junho 2022' = 202206,
