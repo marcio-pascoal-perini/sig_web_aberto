@@ -58,8 +58,9 @@ PNAD2_Admin <- function(session) {
   abrangencia <- 'estados'
   abrangencias <- c('Estados' = 'estados', 'Regiões' = 'regioes')
   
-  trimestre <- 202203
-  trimestres <- c('3º trimestre 2022' = 202203,
+  trimestre <- 202204
+  trimestres <- c('4º trimestre 2022' = 202204,
+                  '3º trimestre 2022' = 202203,
                   '2º trimestre 2022' = 202202,
                   '1º trimestre 2022' = 202201,
                   '4º trimestre 2021' = 202104,
