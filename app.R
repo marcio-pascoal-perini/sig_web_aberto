@@ -44,6 +44,7 @@ body <- dashboardBody(
     tags$meta(name = 'description', content = 'SIG Web Aberto'),
     tags$meta(name = 'keywords', content = 'sig,sistema,informação,indicadores,geográfica,geotecnologia,cartogramas,mapas,gráficos,R,linguagem R,shiny,leaflet,ibge,pnad,caged,região,metropolitana,são paulo'),
     tags$meta(name = 'author', content = 'OkishiSystems'),
+    tags$link(href = 'favicon.ico', rel = 'icon', type = 'image/x-icon'),
     tags$link(href = 'geral.css', rel = 'stylesheet'),
     tags$script(src = 'geral.js')
   ),
@@ -94,19 +95,24 @@ ui <- dashboardPage(
 
 server <- function(input, output, session) {
   options(scipen = 1000, OutDec = ',', warn = -1)
-  tryCatch({
-    logInfo <- data.frame(
-      ip_address = c(session$request[['REMOTE_ADDR']]),
-      host_name = c('?'),
-      date = c(Sys.time())
-    )
-    if (file.exists('log.csv')) {
-      write.table(logInfo, file = 'log.csv', sep = ';', append = TRUE, quote = FALSE, col.names = FALSE, row.names = FALSE)    
-    } else {
-      write.table(logInfo, file = 'log.csv', sep = ';', append = FALSE, quote = FALSE, col.names = TRUE, row.names = FALSE)
-    }
-  })
 
+  tryCatch(
+    expr = {
+      logInfo <- data.frame(
+        ip_address = c(ifelse(is.null(session$request[['HTTP_X_REAL_IP']]), session$request[['REMOTE_ADDR']], session$request[['HTTP_X_REAL_IP']])),
+        host_name = c('?'),
+        date = c(Sys.time())
+      )
+      if (file.exists('log.csv')) {
+        write.table(logInfo, file = 'log.csv', sep = ';', append = TRUE, quote = FALSE, col.names = FALSE, row.names = FALSE)    
+      } else {
+        write.table(logInfo, file = 'log.csv', sep = ';', append = FALSE, quote = FALSE, col.names = TRUE, row.names = FALSE)
+      }
+    },
+    error = function(e){
+    }
+  )
+  
   output$menu <- renderMenu({
     qs <- getQueryString(session = session)
     if (length(qs) > 0) {
@@ -150,7 +156,7 @@ server <- function(input, output, session) {
         menuSubItem(
           text = tags$span('PNAD - Divulgação Regional', tags$br(), 'e Trimestral', title = 'Pesquisa Nacional por Amostra de Domicílios'),
           tabName = 'tabPNAD2',
-          selected = ifelse(stri_cmp_equiv(s, 'pnad1', strength = 2), TRUE, FALSE)
+          selected = ifelse(stri_cmp_equiv(s, 'pnad2', strength = 2), TRUE, FALSE)
         ),
         menuSubItem(
           text = tags$span('SINAPI - Divulgação Regional', title = 'Sistema Nacional de Pesquisa de Custos e Índices da Construção Civil'),

@@ -25,9 +25,9 @@ shiny::runApp()
 ```
 ##### No arquivo INICIO.R
 ```
-endereco <- 'YOUR ADDRESS ON SENDGRID'
-chave <- 'YOUR KEY ON SENDGRID'
-emailSuporte <- 'YOUR SUPORT EMAIL'
-nomeSuporte <- 'YOUR SUPORT NAME'
+endereco <- 'YOUR ADDRESS ON MAILJET'
+chavePublica <- 'YOUR API KEY'
+chavePrivada <- 'YOUR SECRET KEY'
 emailRemetente <- 'YOUR SENDER EMAIL'
+emailDestinatario <- 'YOUR RECIPIENT EMAIL'
 ```
